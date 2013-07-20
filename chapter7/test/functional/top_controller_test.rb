@@ -2,12 +2,14 @@
 require 'test_helper'
 
 class TopControllerTest < ActionController::TestCase
-  test "index" do
-    2.times { Factory(:article) }
-    Factory(:article, released_at: 1.hours.from_now)
-    get :index
-    assert_response :success
-    assert_select "div#content h2", 2
+  test "index for a common member" do
+  	login_as("taro")
+  	assert_raise(ApplicationController::Forbidden) { get :index }
   end
 
+  test "index for an admin" do
+  	login_as("jiro", true)
+  	get :index
+  	assert_response :success
+  end
 end
