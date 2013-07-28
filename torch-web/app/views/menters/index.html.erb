@@ -1,0 +1,8 @@
+
+  <% @menters.each do |menter| %>
+  <ul>
+    <li><%= link_to menter.name, menter_path(menter) %></li>
+    <li><%= menter.career %></li>
+    <li><%= menter.rate %>円／分</li>
+  </ul>
+  <% end %>
