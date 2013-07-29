@@ -1,3 +1,5 @@
 <% @page_title = @menter.name %>
 <h1><%= @menter.name %></h1>
 <p><%= @menter.career %></p>
+<%= image_tag(url_for(action: 'show_image', id: @menter.id), size: '100x100') %>
+<%= link_to "編集", [:edit, @menter] %>
