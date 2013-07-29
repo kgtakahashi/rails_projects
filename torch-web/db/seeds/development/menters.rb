@@ -6,7 +6,9 @@ names = ["高橋　刑事", "前田　翼", "高橋　祐介", "松村　裕"]
 	menter = Menter.create(
 	{	name: names[idx],
 		career: "大阪大学中退",
-		rate: 100 * idx
+		rate: 100 * idx,
+		password: "password",
+		password_confirmation: "password"
 		}, without_protection: true)
 
 	fname = Rails.root.join("db/seeds/development", "sample_face.jpg")

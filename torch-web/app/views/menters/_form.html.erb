@@ -1,0 +1,22 @@
+<table class="attr">
+	<tr>
+		<th><%= form.label :name, "氏名" %></th>
+		<th><%= form.text_field :name, size: 20 %></th>
+	</tr>
+	<tr>
+		<th><%= form.label :career, "経歴" %></th>
+		<th><%= form.text_field :career %></th>
+	</tr>
+	<tr>
+		<th><%= form.label :rate, "料金" %></th>
+		<th><%= form.text_field :rate %>円／分</th>
+	</tr>
+	<tr>
+		<th><%= form.label :password, パスワード %></th>
+		<th><%= form.password_field :password %></th>
+	</tr>
+	<tr>
+		<th><%= form.label :password_confirmation, パスワードの確認 %></th>
+		<th><%= form.password_field :password_confirmation %></th>
+	</tr>
+</table>
