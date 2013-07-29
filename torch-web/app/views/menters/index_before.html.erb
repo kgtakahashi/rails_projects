@@ -1,0 +1,10 @@
+  <%= link_to "メンター新規登録", :new_menter %>
+
+  <% @menters.each do |menter| %>
+  <ul>
+    <li><%= link_to menter.name, menter_path(menter) %></li>
+    <li><%= menter.career %></li>
+    <li><%= menter.rate %>円／分</li>
+    <li><%= image_tag(url_for(action: 'show_image', id: menter.id), size: '100x100') %></li>
+  </ul>
+  <% end %>
