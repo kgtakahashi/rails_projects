@@ -2,7 +2,7 @@ class Menter < ActiveRecord::Base
 	has_one :image, class_name: "MenterImage", dependent: :destroy
 
 
-	ACCESSIBLE_ATTRS = [:name, :career, :rate, :password,
+	ACCESSIBLE_ATTRS = [:name, :career, :catch_copy, :about, :rate, :password,
 		:password_confirmation, :image_attributes ]
 		
 	attr_accessible *ACCESSIBLE_ATTRS
