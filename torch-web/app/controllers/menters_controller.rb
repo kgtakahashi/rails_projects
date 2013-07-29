@@ -11,7 +11,6 @@ class MentersController < ApplicationController
 
 	def new
 		@menter = Menter.new
-		@menter.build_image
 	end
 
 	def edit

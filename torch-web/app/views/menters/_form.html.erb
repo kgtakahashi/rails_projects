@@ -12,27 +12,11 @@
 		<th><%= form.text_field :rate %>円／分</th>
 	</tr>
 	<tr>
-		<th><%= form.label :password, "パスワード" %></th>
+		<th><%= form.label :password, パスワード %></th>
 		<th><%= form.password_field :password %></th>
 	</tr>
 	<tr>
-		<th><%= form.label :password_confirmation, "パスワードの確認" %></th>
+		<th><%= form.label :password_confirmation, パスワードの確認 %></th>
 		<th><%= form.password_field :password_confirmation %></th>
 	</tr>
-<%= form.fields_for :image do |imgf| %>
-	<tr>
-		<th><%= imgf.label :uploaded_image %></th>
-		<td>
-			<%= imgf.file_field :uploaded_image %>
-			<% if !imgf.object.new_record? && imgf.object.errors.empty? %>
-			<div>
-				<%= menter_image_tag @menter, size: "60x80" %>
-				<%= imgf.check_box :_destroy %>
-				<%= imgf.label :_destroy %>
-				<%= imgf.hidden_field :id %>
-			</div>
-			<% end %>
-		</td>
-	</tr>
-	<% end %>
 </table>

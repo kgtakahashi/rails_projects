@@ -1,7 +1,8 @@
-<% @page_title = "EDIT MENTER" %>
+<% @page_title = @menter.name + "さんの編集" %>
+
 <h1><%= @page_title %></h1>
 
-<%= link_to :show, @menter %>
+<p><%= link_to "詳細に戻る", @menter %></p>
 
 <%= form_for @menter, html: { multipart: true } do |form| %>
 <%= render "form", form: form %>
