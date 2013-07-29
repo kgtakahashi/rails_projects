@@ -1,0 +1,9 @@
+<% @page_title = "EDIT MENTER" %>
+<h1><%= @page_title %></h1>
+
+<%= link_to :show, @menter %>
+
+<%= form_for @menter, html: { multipart: true } do |form| %>
+<%= render "form", form: form %>
+<p><%= form.submit %></p>
+<% end %>
