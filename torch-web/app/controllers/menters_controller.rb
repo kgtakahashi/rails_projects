@@ -11,10 +11,12 @@ class MentersController < ApplicationController
 
 	def new
 		@menter = Menter.new
+		@menter.build_image
 	end
 
 	def edit
 		@menter = Menter.find(params[:id])
+		@menter.build_image unless @menter.image
 	end
 
 	def create
@@ -27,7 +29,14 @@ class MentersController < ApplicationController
 	end
 
 	def update
-	end
+    @menter = Menter.find(params[:id])
+    @menter.assign_attributes(params[:menter])
+    if @menter.save
+      redirect_to @menter, notice: "会員情報を更新しました。"
+    else
+      render "edit"
+    end
+  end
 
 	def destroy
 	end
