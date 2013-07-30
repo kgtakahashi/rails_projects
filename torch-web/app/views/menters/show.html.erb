@@ -3,10 +3,11 @@
 	<div class="sspan7 offset0">
 		<%= image_tag(url_for(action: 'show_image', id: @menter.id), size: '300x300') %>
 	</div>
-	<div class="span4 ofset4", style="font-size:300%">
-		<h1><%= @menter.name %></h1>
-		<h2><%= @menter.career %></h2>
-		<h2><%= @menter.catch_copy %></h2>
+	<div class="span4 ofset4">
+		<h1 style="font-size:300%"><%= @menter.name %></h1>
+		<h2 style="font-size:300%"><%= @menter.career %></h2>
+		<h2 style="font-size:300%"><%= @menter.catch_copy %></h2>
+		<br><br>
+		<p style="font-size:100%"><%= @menter.about %></p>
 	</div>
 </div>
-<p><%= @menter.about %></p>
