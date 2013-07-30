@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130729192329) do
+ActiveRecord::Schema.define(:version => 20130730055522) do
 
   create_table "menter_images", :force => true do |t|
     t.integer  "menter_id",    :null => false
@@ -32,6 +32,16 @@ ActiveRecord::Schema.define(:version => 20130729192329) do
     t.string   "hashed_password"
     t.string   "about"
     t.string   "catch_copy"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name",                               :null => false
+    t.integer  "age"
+    t.string   "profile"
+    t.boolean  "student",         :default => false
+    t.string   "hashed_password"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
   end
 
 end

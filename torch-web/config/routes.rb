@@ -6,5 +6,6 @@ TorchWeb::Application.routes.draw do
     	get 'show_image'
   	end
 	end
+	resources :users
 
 end

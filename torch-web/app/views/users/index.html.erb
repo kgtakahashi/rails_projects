@@ -1,0 +1,14 @@
+<% @users.each do |user| %> 
+	<ul style="list-style:none">
+		<br><br><br><br>
+  	<li><%= link_to user.name, user_path(user) %></li>
+  	<br><br>
+    <li><%= user.age %></li>
+    <br><br>
+    <li><%= user.profile %></li>
+    <br><br>
+  	<li><%= user.student %></li>
+	  <br><br><br>
+  </ul>
+	<br><br><br>
+<% end %>

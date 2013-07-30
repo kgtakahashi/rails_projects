@@ -1,0 +1,6 @@
+<% @page_title = @user.name %>
+<h1 style="font-size:300%"><%= @user.name %></h1>
+<h2 style="font-size:300%"><%= @user.age %>歳</h2>
+<h2 style="font-size:300%"><%= @user.student %></h2>
+<p style="font-size:100%"><%= @user.profile %></p>
+<%= link_to "編集", [:edit, :user] %>
