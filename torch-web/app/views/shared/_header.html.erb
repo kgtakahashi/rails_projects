@@ -14,17 +14,21 @@
             <li class="">
               <%= link_to "Menters", :menters %>
             </li>
-            <li class="">
-              <%= link_to "rogin", "#" %>
-            </li>
-            <li class="">
-              <%= link_to "admin", "#" %>
+            <li  id="user_nav">
+              <% if current_user %>
+                <%= link_to "ログアウト" ,logout_path %>
+              <% else %>
+               <%= link_to "Login By FB", "/auth/facebook" %>
+              <% end %>
             </li>
             <li class="">
               <%= link_to "users", :users %>
             </li>
             <li class="">
               <%= link_to "Regist new user", controller: "users", action: "new" %>
+            </li>
+            <li class="">
+              こんにちわ<%= current_user.name %>さん
             </li>
    	      </ul>
    　    </div>

@@ -35,13 +35,11 @@ ActiveRecord::Schema.define(:version => 20130730055522) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name",                               :null => false
-    t.integer  "age"
-    t.string   "profile"
-    t.boolean  "student",         :default => false
-    t.string   "hashed_password"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
+    t.string   "name",       :null => false
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
