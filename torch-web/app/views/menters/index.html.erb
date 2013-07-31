@@ -17,11 +17,13 @@
     		<li><%= menter.catch_copy %></li>
     		<br><br>
 	    	<li><%= menter.rate %>円／分</li>
-	    	<br><br><br>
+	    	<br>
   		</ul>
-  		<div class="actions">
-			  <input type="submit" class="btn primary" value="このボタンいらないかなw">
-			</div>
+  		<% if current_user %>
+	  		<div class="actions">
+				  <input type="submit" class="btn primary" value="コール">	
+				</div>
+			<% end %>
 		</div>
 	</div>
 	<br><br><br>

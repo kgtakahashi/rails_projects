@@ -27,9 +27,11 @@
             <li class="">
               <%= link_to "Regist new user", controller: "users", action: "new" %>
             </li>
-            <li class="">
-              こんにちわ<%= current_user.name %>さん
-            </li>
+            <% if current_user %>
+              <li class="">
+                こんにちわ<%= current_user.name %>さん
+              </li>
+            <% end %>
    	      </ul>
    　    </div>
 	    </div>
